@@ -1,6 +1,10 @@
 import elementaryImage from '../../assets/images/program-elementary.png'
 import englishImage from '../../assets/images/program-english.png'
+import computerEngineeringImage from '../../assets/images/program-computer-engineering.png'
+import humanResourceImage from '../../assets/images/program-human-resource-management.png'
+import industrialEngineeringImage from '../../assets/images/program-industrial-engineering.png'
 import itImage from '../../assets/images/program-it.png'
+import psychologyImage from '../../assets/images/program-psychology.png'
 import socialStudiesImage from '../../assets/images/program-social-studies.png'
 import { ArrowIcon } from '../common/ArrowIcon'
 import { ScrollReveal } from '../common/ScrollReveal'
@@ -29,6 +33,30 @@ const programs = [
     title: 'Bachelor of Elementary Education',
     description: 'Equipping compassionate teachers with creative and inclusive approaches for young learners.',
     image: elementaryImage,
+  },
+  {
+    code: 'BSCPE-BN',
+    title: 'Bachelor of Science in Computer Engineering',
+    description: 'Preparing innovators to design and develop reliable computer hardware, embedded systems, and intelligent technologies.',
+    image: computerEngineeringImage,
+  },
+  {
+    code: 'BSIE-BN',
+    title: 'Bachelor of Science in Industrial Engineering',
+    description: 'Developing analytical professionals who improve systems, processes, productivity, and organizational performance.',
+    image: industrialEngineeringImage,
+  },
+  {
+    code: 'BSBA-HRM-BN',
+    title: 'Bachelor of Science in Business Administration Major in Human Resource Management',
+    description: 'Building people-centered business leaders skilled in talent development, workplace relations, and organizational strategy.',
+    image: humanResourceImage,
+  },
+  {
+    code: 'BSPSY-BN',
+    title: 'Bachelor of Science in Psychology',
+    description: 'Cultivating ethical and research-oriented professionals who understand human behavior and promote well-being.',
+    image: psychologyImage,
   },
 ]
 

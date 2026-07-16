@@ -24,7 +24,16 @@ const menuItems: MenuItem[] = [
   { label: 'Certificate of Program Compliance' },
   {
     label: 'Program Under Survey',
-    children: ['BSIT-BN', 'BEED-BN', 'BSED-EN-BN', 'BSED-SS-BN'],
+    children: [
+      'BSIT-BN',
+      'BEED-BN',
+      'BSED-EN-BN',
+      'BSED-SS-BN',
+      'BSCPE-BN',
+      'BSIE-BN',
+      'BSBA-HRM-BN',
+      'BSPSY-BN',
+    ],
   },
   {
     label: 'Exhibit',
