@@ -15,7 +15,7 @@ const aboutSections = [
     title: 'Vision and Mission',
     description: 'Discover the principles and purpose that guide PUP Biñan Campus.',
     image: visionImage,
-    href: '#vision-and-mission',
+    href: '/vision-and-mission',
   },
   {
     title: 'History of PUP Biñan',
@@ -85,7 +85,7 @@ export function AboutPage() {
             <div className="mt-14 grid items-stretch gap-7 sm:grid-cols-2 lg:grid-cols-3">
               {aboutSections.map((section, index) => (
                 <ScrollReveal key={section.title} delay={(index % 3) * 80} className="h-full">
-                  <a id={section.href.slice(1)} href={section.href} className="group flex h-full scroll-mt-48 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+                  <a id={section.href.startsWith('#') ? section.href.slice(1) : undefined} href={section.href} className="group flex h-full scroll-mt-48 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl">
                     <div className="overflow-hidden">
                       <img src={section.image} alt="" className="aspect-[3/2] w-full object-cover transition duration-500 group-hover:scale-[1.04]" />
                     </div>
