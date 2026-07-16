@@ -1,4 +1,5 @@
 import { AboutPage } from './pages/AboutPage'
+import { AdministrativeManualPage } from './pages/AdministrativeManualPage'
 import { BeedPage } from './pages/BeedPage'
 import { BoardOfRegentsPage } from './pages/BoardOfRegentsPage'
 import { BsbaHrmPage } from './pages/BsbaHrmPage'
@@ -9,14 +10,38 @@ import { BspsyPage } from './pages/BspsyPage'
 import { BsedEnglishPage } from './pages/BsedEnglishPage'
 import { BsedSocialStudiesPage } from './pages/BsedSocialStudiesPage'
 import { CampusOfficialsPage } from './pages/CampusOfficialsPage'
+import { CitizenCharterPage } from './pages/CitizenCharterPage'
 import { ComingSoonPage } from './pages/ComingSoonPage'
 import { HomePage } from './pages/HomePage'
 import { HistoryPage } from './pages/HistoryPage'
 import { OrganizationsPage } from './pages/OrganizationsPage'
+import { StudentHandbookPage } from './pages/StudentHandbookPage'
 import { UniversityOfficialsPage } from './pages/UniversityOfficialsPage'
+import { UniversityCodePage } from './pages/UniversityCodePage'
+import { VirtualCampusPage } from './pages/VirtualCampusPage'
 import { VisionMissionPage } from './pages/VisionMissionPage'
 
 function App() {
+  if (window.location.pathname === '/virtual-campus') {
+    return <VirtualCampusPage />
+  }
+
+  if (window.location.pathname === '/student-handbook') {
+    return <StudentHandbookPage />
+  }
+
+  if (window.location.pathname === '/administrative-manual') {
+    return <AdministrativeManualPage />
+  }
+
+  if (window.location.pathname === '/university-code') {
+    return <UniversityCodePage />
+  }
+
+  if (window.location.pathname === '/citizen-charter') {
+    return <CitizenCharterPage />
+  }
+
   if (window.location.pathname === '/bspsy') {
     return <BspsyPage />
   }

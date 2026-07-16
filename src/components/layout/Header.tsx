@@ -67,12 +67,29 @@ function getMenuHref(label: string) {
 }
 
 function getChildHref(parentLabel: string, childLabel: string) {
+  if (parentLabel === 'Exhibit' && childLabel === "Citizen's Charter") {
+    return '/citizen-charter'
+  }
+
+  if (parentLabel === 'Exhibit' && childLabel === 'University Code') {
+    return '/university-code'
+  }
+
+  if (parentLabel === 'Exhibit' && childLabel === 'Administrative Manual') {
+    return '/administrative-manual'
+  }
+
+  if (parentLabel === 'Exhibit' && childLabel === 'Student Handbook') {
+    return '/student-handbook'
+  }
+
   if (parentLabel.includes('About PUP')) {
     if (childLabel === 'Vision and Mission') return '/vision-and-mission'
     if (childLabel === 'History') return '/history'
     if (childLabel === 'Board of Regents') return '/board-of-regent'
     if (childLabel === 'University Officials') return '/university-official'
     if (childLabel === 'Campus Officials') return '/campus-official'
+    if (childLabel === 'Virtual Campus') return '/virtual-campus'
     if (childLabel === 'Organizations') return '/organization'
 
     const sectionId = childLabel.toLowerCase().replaceAll(' ', '-')
