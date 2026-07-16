@@ -70,7 +70,9 @@ function getChildHref(parentLabel: string, childLabel: string) {
   if (parentLabel.includes('About PUP')) {
     if (childLabel === 'Vision and Mission') return '/vision-and-mission'
     if (childLabel === 'History') return '/history'
-    if (childLabel === 'University Officials') return '/executive-official'
+    if (childLabel === 'Board of Regents') return '/board-of-regent'
+    if (childLabel === 'University Officials') return '/university-official'
+    if (childLabel === 'Campus Officials') return '/campus-official'
 
     const sectionId = childLabel.toLowerCase().replaceAll(' ', '-')
     return `/about-pup-binan#${sectionId}`

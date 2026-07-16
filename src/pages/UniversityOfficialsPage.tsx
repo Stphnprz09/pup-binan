@@ -3,7 +3,7 @@ import { Header } from '../components/layout/Header'
 import { OfficialsHero } from '../components/officials/OfficialsHero'
 import { OfficialsSection } from '../components/officials/OfficialsSection'
 
-export function ExecutiveOfficialsPage() {
+export function UniversityOfficialsPage() {
   return (
     <div className="min-h-screen bg-[#f7f5f1] text-slate-900">
       <Header />

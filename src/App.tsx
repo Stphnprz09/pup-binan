@@ -1,12 +1,22 @@
 import { AboutPage } from './pages/AboutPage'
-import { ExecutiveOfficialsPage } from './pages/ExecutiveOfficialsPage'
+import { BoardOfRegentsPage } from './pages/BoardOfRegentsPage'
+import { CampusOfficialsPage } from './pages/CampusOfficialsPage'
 import { HomePage } from './pages/HomePage'
 import { HistoryPage } from './pages/HistoryPage'
+import { UniversityOfficialsPage } from './pages/UniversityOfficialsPage'
 import { VisionMissionPage } from './pages/VisionMissionPage'
 
 function App() {
-  if (window.location.pathname === '/executive-official') {
-    return <ExecutiveOfficialsPage />
+  if (window.location.pathname === '/board-of-regent') {
+    return <BoardOfRegentsPage />
+  }
+
+  if (window.location.pathname === '/campus-official') {
+    return <CampusOfficialsPage />
+  }
+
+  if (window.location.pathname === '/university-official') {
+    return <UniversityOfficialsPage />
   }
 
   if (window.location.pathname === '/history') {

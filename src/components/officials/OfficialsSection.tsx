@@ -62,7 +62,7 @@ export function OfficialsSection() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <ScrollReveal className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#8a1724]">Leadership directory</p>
-          <h2 id="officials-title" className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Executive Officials</h2>
+          <h2 id="officials-title" className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">University Officials</h2>
           <p className="mt-5 leading-7 text-slate-600">Committed leaders advancing excellence, inclusion, and responsive public education.</p>
         </ScrollReveal>
 

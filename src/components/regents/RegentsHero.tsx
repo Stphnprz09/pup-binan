@@ -1,17 +1,17 @@
 import campusImage from '../../assets/images/pupbinan.webp'
 import { ScrollReveal } from '../common/ScrollReveal'
 
-export function OfficialsHero() {
+export function RegentsHero() {
   return (
     <section className="relative isolate grid min-h-[420px] place-items-center overflow-hidden px-5 py-20 text-center text-white lg:min-h-[480px]">
       <img src={campusImage} alt="PUP Biñan Campus" className="absolute inset-0 -z-20 size-full object-cover object-center" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#39050b]/90 via-[#650b16]/70 to-black/45" />
       <ScrollReveal>
-        <p className="text-xs font-bold uppercase tracking-[0.28em] text-amber-300">University leadership</p>
-        <h1 className="mt-5 text-5xl font-black tracking-tight sm:text-6xl">University Officials</h1>
+        <p className="text-xs font-bold uppercase tracking-[0.28em] text-amber-300">University governance</p>
+        <h1 className="mt-5 text-5xl font-black tracking-tight sm:text-6xl">Board of Regents</h1>
         <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-amber-400" />
         <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-white/75 sm:text-lg">
-          Meet the university leaders guiding PUP's academic mission, public service, and institutional development.
+          Meet the governing body entrusted with the stewardship and strategic direction of the university.
         </p>
       </ScrollReveal>
     </section>

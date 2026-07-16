@@ -27,19 +27,19 @@ const aboutSections = [
     title: 'Board of Regents',
     description: 'Meet the governing body that provides institutional direction.',
     image: boardImage,
-    href: '#board-of-regents',
+    href: '/board-of-regent',
   },
   {
     title: 'University Officials',
     description: 'Learn about the university leaders advancing the PUP mandate.',
     image: universityOfficialsImage,
-    href: '/executive-official',
+    href: '/university-official',
   },
   {
     title: 'Campus Officials',
     description: 'Meet the officials leading PUP Biñan programs and services.',
     image: campusOfficialsImage,
-    href: '#campus-officials',
+    href: '/campus-official',
   },
   {
     title: 'Virtual Campus',
