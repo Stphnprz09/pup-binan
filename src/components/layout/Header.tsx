@@ -58,7 +58,7 @@ export function Header() {
   }
 
   return (
-    <header className="relative z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="bg-[#720d18] px-5 py-2 text-center text-xs font-semibold tracking-wide text-white sm:text-left">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <span>THE COUNTRY'S 1ST POLYTECHNIC UNIVERSITY</span>
