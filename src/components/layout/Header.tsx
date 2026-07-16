@@ -58,6 +58,25 @@ function ChevronIcon() {
   )
 }
 
+function getMenuHref(label: string) {
+  if (label === 'Home') return '/'
+  if (label.includes('About PUP')) return '/about-pup-binan'
+  if (label === 'Program Under Survey') return '/#programs'
+
+  return '#placeholder'
+}
+
+function getChildHref(parentLabel: string, childLabel: string) {
+  if (parentLabel.includes('About PUP')) {
+    const sectionId = childLabel.toLowerCase().replaceAll(' ', '-')
+    return `/about-pup-binan#${sectionId}`
+  }
+
+  if (parentLabel === 'Program Under Survey') return '/#programs'
+
+  return '#placeholder'
+}
+
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openSection, setOpenSection] = useState<string | null>(null)
@@ -76,7 +95,7 @@ export function Header() {
       </div>
 
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 lg:px-8">
-        <a href="#home" className="flex min-w-0 items-center gap-3" aria-label="PUP Biñan home">
+        <a href="/" className="flex min-w-0 items-center gap-3" aria-label="PUP Biñan home">
           <img src={pupBinanLogo} alt="PUP Biñan Campus seal" className="size-14 shrink-0 object-contain sm:size-16" />
           <div className="min-w-0 border-l border-slate-200 pl-3">
             <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#8a1724] sm:text-xs">
@@ -106,7 +125,7 @@ export function Header() {
           {menuItems.map((item) => (
             <div key={item.label} className="group relative flex">
               <a
-                href={`#${item.label.toLowerCase().replaceAll(' ', '-')}`}
+                href={getMenuHref(item.label)}
                 className="flex items-center gap-1.5 border-b-3 border-transparent px-3 py-4 text-center text-xs font-bold leading-tight text-slate-700 transition hover:border-[#8a1724] hover:text-[#8a1724] xl:px-4 xl:text-[13px]"
               >
                 {item.label}
@@ -116,7 +135,7 @@ export function Header() {
               {item.children && (
                 <div className="invisible absolute left-0 top-full w-64 translate-y-2 rounded-b-xl border-t-3 border-[#8a1724] bg-white p-2 opacity-0 shadow-xl transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
                   {item.children.map((child) => (
-                    <a key={child} href="#placeholder" className="block rounded-lg px-4 py-2.5 text-sm text-slate-700 hover:bg-[#8a1724]/7 hover:text-[#8a1724]">
+                    <a key={child} href={getChildHref(item.label, child)} className="block rounded-lg px-4 py-2.5 text-sm text-slate-700 hover:bg-[#8a1724]/7 hover:text-[#8a1724]">
                       {child}
                     </a>
                   ))}
@@ -131,7 +150,7 @@ export function Header() {
             {menuItems.map((item) => (
               <div key={item.label} className="border-b border-slate-100 last:border-0">
                 <div className="flex items-center">
-                  <a href="#placeholder" className="flex-1 py-3 text-sm font-semibold text-slate-800">
+                  <a href={getMenuHref(item.label)} className="flex-1 py-3 text-sm font-semibold text-slate-800">
                     {item.label}
                   </a>
                   {item.children && (
@@ -142,7 +161,7 @@ export function Header() {
                 </div>
                 {item.children && openSection === item.label && (
                   <div className="mb-3 border-l-2 border-[#8a1724] pl-4">
-                    {item.children.map((child) => <a key={child} href="#placeholder" className="block py-2 text-sm text-slate-600">{child}</a>)}
+                    {item.children.map((child) => <a key={child} href={getChildHref(item.label, child)} className="block py-2 text-sm text-slate-600">{child}</a>)}
                   </div>
                 )}
               </div>

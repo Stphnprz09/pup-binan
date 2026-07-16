@@ -1,10 +1,10 @@
 const quickLinks = [
-  'Home',
-  'About PUP Biñan',
-  'Certificate of Authenticity',
-  'Certificate of Program Compliance',
-  'Programs Under Survey',
-  'Exhibit',
+  { label: 'Home', href: '/' },
+  { label: 'About PUP Biñan', href: '/about-pup-binan' },
+  { label: 'Certificate of Authenticity', href: '#placeholder' },
+  { label: 'Certificate of Program Compliance', href: '#placeholder' },
+  { label: 'Programs Under Survey', href: '/#programs' },
+  { label: 'Exhibit', href: '#placeholder' },
 ]
 
 export function QuickLinks() {
@@ -13,8 +13,8 @@ export function QuickLinks() {
       <h3 className="text-sm font-bold uppercase tracking-wider text-amber-300">Quick links</h3>
       <div className="mt-5 grid gap-2.5">
         {quickLinks.map((link) => (
-          <a key={link} href="#placeholder" className="text-sm text-white/65 transition hover:text-white">
-            {link}
+          <a key={link.label} href={link.href} className="text-sm text-white/65 transition hover:text-white">
+            {link.label}
           </a>
         ))}
       </div>
