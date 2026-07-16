@@ -21,7 +21,7 @@ const aboutSections = [
     title: 'History of PUP Biñan',
     description: 'Trace the milestones that shaped the campus and its community.',
     image: historyImage,
-    href: '#history',
+    href: '/history',
   },
   {
     title: 'Board of Regents',

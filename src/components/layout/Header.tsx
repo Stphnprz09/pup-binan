@@ -69,6 +69,7 @@ function getMenuHref(label: string) {
 function getChildHref(parentLabel: string, childLabel: string) {
   if (parentLabel.includes('About PUP')) {
     if (childLabel === 'Vision and Mission') return '/vision-and-mission'
+    if (childLabel === 'History') return '/history'
 
     const sectionId = childLabel.toLowerCase().replaceAll(' ', '-')
     return `/about-pup-binan#${sectionId}`
