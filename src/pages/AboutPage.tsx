@@ -33,7 +33,7 @@ const aboutSections = [
     title: 'University Officials',
     description: 'Learn about the university leaders advancing the PUP mandate.',
     image: universityOfficialsImage,
-    href: '#university-officials',
+    href: '/executive-official',
   },
   {
     title: 'Campus Officials',

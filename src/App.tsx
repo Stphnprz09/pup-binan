@@ -1,9 +1,14 @@
 import { AboutPage } from './pages/AboutPage'
+import { ExecutiveOfficialsPage } from './pages/ExecutiveOfficialsPage'
 import { HomePage } from './pages/HomePage'
 import { HistoryPage } from './pages/HistoryPage'
 import { VisionMissionPage } from './pages/VisionMissionPage'
 
 function App() {
+  if (window.location.pathname === '/executive-official') {
+    return <ExecutiveOfficialsPage />
+  }
+
   if (window.location.pathname === '/history') {
     return <HistoryPage />
   }
