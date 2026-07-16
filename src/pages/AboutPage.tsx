@@ -45,13 +45,13 @@ const aboutSections = [
     title: 'Virtual Campus',
     description: 'Explore the spaces where the PUP Biñan community learns and grows.',
     image: campusImage,
-    href: '#virtual-campus',
+    href: '/coming-soon',
   },
   {
     title: 'Organizations',
     description: 'Get to know the groups that enrich campus life and student leadership.',
     image: organizationsImage,
-    href: '#organizations',
+    href: '/organization',
   },
 ]
 

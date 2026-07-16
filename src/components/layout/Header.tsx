@@ -63,7 +63,7 @@ function getMenuHref(label: string) {
   if (label.includes('About PUP')) return '/about-pup-binan'
   if (label === 'Program Under Survey') return '/#programs'
 
-  return '#placeholder'
+  return '/coming-soon'
 }
 
 function getChildHref(parentLabel: string, childLabel: string) {
@@ -73,14 +73,15 @@ function getChildHref(parentLabel: string, childLabel: string) {
     if (childLabel === 'Board of Regents') return '/board-of-regent'
     if (childLabel === 'University Officials') return '/university-official'
     if (childLabel === 'Campus Officials') return '/campus-official'
+    if (childLabel === 'Organizations') return '/organization'
 
     const sectionId = childLabel.toLowerCase().replaceAll(' ', '-')
     return `/about-pup-binan#${sectionId}`
   }
 
-  if (parentLabel === 'Program Under Survey') return '/#programs'
+  if (parentLabel === 'Program Under Survey') return '/coming-soon'
 
-  return '#placeholder'
+  return '/coming-soon'
 }
 
 export function Header() {

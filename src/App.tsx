@@ -1,12 +1,22 @@
 import { AboutPage } from './pages/AboutPage'
 import { BoardOfRegentsPage } from './pages/BoardOfRegentsPage'
 import { CampusOfficialsPage } from './pages/CampusOfficialsPage'
+import { ComingSoonPage } from './pages/ComingSoonPage'
 import { HomePage } from './pages/HomePage'
 import { HistoryPage } from './pages/HistoryPage'
+import { OrganizationsPage } from './pages/OrganizationsPage'
 import { UniversityOfficialsPage } from './pages/UniversityOfficialsPage'
 import { VisionMissionPage } from './pages/VisionMissionPage'
 
 function App() {
+  if (window.location.pathname === '/coming-soon') {
+    return <ComingSoonPage />
+  }
+
+  if (window.location.pathname === '/organization') {
+    return <OrganizationsPage />
+  }
+
   if (window.location.pathname === '/board-of-regent') {
     return <BoardOfRegentsPage />
   }

@@ -21,21 +21,21 @@ export function ComingSoonPage() {
 
         <ScrollReveal delay={200}>
           <h1 className="mt-4 text-5xl font-bold tracking-tight text-balance sm:text-7xl">
-            Our accreditation website is coming soon.
+            This page is coming soon.
           </h1>
         </ScrollReveal>
 
         <ScrollReveal delay={300}>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-black/70">
-            We are preparing a dedicated digital platform in support of the Level 1
-            Accreditation of PUP Biñan Campus. Please check back soon.
+            We are preparing this section of the PUP Biñan Campus accreditation
+            portal. Please check back soon.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={400}>
-          <div className="mt-10 rounded-full bg-[#800000] px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-black/15">
-            Website coming soon
-          </div>
+          <a href="/" className="mt-10 inline-block rounded-full bg-[#800000] px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-black/15 transition hover:bg-[#650b16]">
+            Return to home
+          </a>
         </ScrollReveal>
       </section>
 
