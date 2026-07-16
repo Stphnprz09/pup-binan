@@ -61,6 +61,8 @@ function ChevronIcon() {
 function getMenuHref(label: string) {
   if (label === 'Home') return '/'
   if (label.includes('About PUP')) return '/about-pup-binan'
+  if (label === 'Certificate of Authenticity') return '/certificate-of-authenticity'
+  if (label === 'Certificate of Program Compliance') return '/certificate-of-program-compliance'
   if (label === 'Program Under Survey') return '/#programs'
 
   return '/coming-soon'

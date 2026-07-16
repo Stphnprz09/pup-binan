@@ -10,11 +10,13 @@ import { BspsyPage } from './pages/BspsyPage'
 import { BsedEnglishPage } from './pages/BsedEnglishPage'
 import { BsedSocialStudiesPage } from './pages/BsedSocialStudiesPage'
 import { CampusOfficialsPage } from './pages/CampusOfficialsPage'
+import { CertificateAuthenticityPage } from './pages/CertificateAuthenticityPage'
 import { CitizenCharterPage } from './pages/CitizenCharterPage'
 import { ComingSoonPage } from './pages/ComingSoonPage'
 import { HomePage } from './pages/HomePage'
 import { HistoryPage } from './pages/HistoryPage'
 import { OrganizationsPage } from './pages/OrganizationsPage'
+import { ProgramCompliancePage } from './pages/ProgramCompliancePage'
 import { StudentHandbookPage } from './pages/StudentHandbookPage'
 import { UniversityOfficialsPage } from './pages/UniversityOfficialsPage'
 import { UniversityCodePage } from './pages/UniversityCodePage'
@@ -22,6 +24,14 @@ import { VirtualCampusPage } from './pages/VirtualCampusPage'
 import { VisionMissionPage } from './pages/VisionMissionPage'
 
 function App() {
+  if (window.location.pathname === '/certificate-of-program-compliance') {
+    return <ProgramCompliancePage />
+  }
+
+  if (window.location.pathname === '/certificate-of-authenticity') {
+    return <CertificateAuthenticityPage />
+  }
+
   if (window.location.pathname === '/virtual-campus') {
     return <VirtualCampusPage />
   }

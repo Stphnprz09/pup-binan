@@ -1,8 +1,8 @@
 const quickLinks = [
   { label: 'Home', href: '/' },
   { label: 'About PUP Biñan', href: '/about-pup-binan' },
-  { label: 'Certificate of Authenticity', href: '/coming-soon' },
-  { label: 'Certificate of Program Compliance', href: '/coming-soon' },
+  { label: 'Certificate of Authenticity', href: '/certificate-of-authenticity' },
+  { label: 'Certificate of Program Compliance', href: '/certificate-of-program-compliance' },
   { label: 'Programs Under Survey', href: '/#programs' },
   { label: 'Exhibit', href: '/coming-soon' },
 ]
