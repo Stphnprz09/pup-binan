@@ -1,5 +1,6 @@
 import { AboutPage } from './pages/AboutPage'
 import { BoardOfRegentsPage } from './pages/BoardOfRegentsPage'
+import { BsitPage } from './pages/BsitPage'
 import { CampusOfficialsPage } from './pages/CampusOfficialsPage'
 import { ComingSoonPage } from './pages/ComingSoonPage'
 import { HomePage } from './pages/HomePage'
@@ -9,6 +10,10 @@ import { UniversityOfficialsPage } from './pages/UniversityOfficialsPage'
 import { VisionMissionPage } from './pages/VisionMissionPage'
 
 function App() {
+  if (window.location.pathname === '/bsit') {
+    return <BsitPage />
+  }
+
   if (window.location.pathname === '/coming-soon') {
     return <ComingSoonPage />
   }

@@ -79,7 +79,11 @@ function getChildHref(parentLabel: string, childLabel: string) {
     return `/about-pup-binan#${sectionId}`
   }
 
-  if (parentLabel === 'Program Under Survey') return '/coming-soon'
+  if (parentLabel === 'Program Under Survey') {
+    if (childLabel === 'BSIT-BN') return '/bsit'
+
+    return '/coming-soon'
+  }
 
   return '/coming-soon'
 }
