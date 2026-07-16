@@ -64,6 +64,7 @@ function getProgramHref(code: string) {
   if (code === 'BSIT-BN') return '/bsit'
   if (code === 'BEED-BN') return '/beed'
   if (code === 'BSED-EN-BN') return '/bsed-en'
+  if (code === 'BSED-SS-BN') return '/bsed-ss'
 
   return '/coming-soon'
 }

@@ -3,6 +3,7 @@ import { BeedPage } from './pages/BeedPage'
 import { BoardOfRegentsPage } from './pages/BoardOfRegentsPage'
 import { BsitPage } from './pages/BsitPage'
 import { BsedEnglishPage } from './pages/BsedEnglishPage'
+import { BsedSocialStudiesPage } from './pages/BsedSocialStudiesPage'
 import { CampusOfficialsPage } from './pages/CampusOfficialsPage'
 import { ComingSoonPage } from './pages/ComingSoonPage'
 import { HomePage } from './pages/HomePage'
@@ -12,6 +13,10 @@ import { UniversityOfficialsPage } from './pages/UniversityOfficialsPage'
 import { VisionMissionPage } from './pages/VisionMissionPage'
 
 function App() {
+  if (window.location.pathname === '/bsed-ss') {
+    return <BsedSocialStudiesPage />
+  }
+
   if (window.location.pathname === '/bsed-en') {
     return <BsedEnglishPage />
   }

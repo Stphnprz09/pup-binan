@@ -83,6 +83,7 @@ function getChildHref(parentLabel: string, childLabel: string) {
     if (childLabel === 'BSIT-BN') return '/bsit'
     if (childLabel === 'BEED-BN') return '/beed'
     if (childLabel === 'BSED-EN-BN') return '/bsed-en'
+    if (childLabel === 'BSED-SS-BN') return '/bsed-ss'
 
     return '/coming-soon'
   }
