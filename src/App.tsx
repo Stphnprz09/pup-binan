@@ -1,7 +1,7 @@
-import { ComingSoonPage } from './pages/ComingSoonPage'
+import { HomePage } from './pages/HomePage'
 
 function App() {
-  return <ComingSoonPage />
+  return <HomePage />
 }
 
 export default App
