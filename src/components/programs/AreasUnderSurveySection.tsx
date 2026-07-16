@@ -37,7 +37,13 @@ export function AreasUnderSurveySection() {
         <div className="mt-14 grid items-stretch gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {surveyAreas.map((area, index) => (
             <ScrollReveal key={area.title} delay={(index % 3) * 80} className="h-full">
-              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+              <a
+                href="/coming-soon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${area.title} in a new tab`}
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#8a1724]"
+              >
                 <div className="relative overflow-hidden">
                   <img src={area.image} alt="" className="aspect-[3/2] w-full object-cover transition duration-500 group-hover:scale-[1.04]" />
                   <span className="absolute left-4 top-4 grid size-11 place-items-center rounded-xl bg-[#8a1724] text-sm font-black text-white shadow-lg">{String(index + 1).padStart(2, '0')}</span>
@@ -45,7 +51,7 @@ export function AreasUnderSurveySection() {
                 <div className="flex flex-1 items-center justify-center p-6 text-center">
                   <h3 className="font-bold leading-snug text-slate-800">{area.title}</h3>
                 </div>
-              </article>
+              </a>
             </ScrollReveal>
           ))}
         </div>

@@ -60,6 +60,14 @@ const programs = [
   },
 ]
 
+function getProgramHref(code: string) {
+  if (code === 'BSIT-BN') return '/bsit'
+  if (code === 'BEED-BN') return '/beed'
+  if (code === 'BSED-EN-BN') return '/bsed-en'
+
+  return '/coming-soon'
+}
+
 export function ProgramsSection() {
   return (
     <section id="programs" className="py-20 lg:py-28">
@@ -73,7 +81,7 @@ export function ProgramsSection() {
         <div className="mt-14 grid items-stretch gap-7 md:grid-cols-2">
           {programs.map((program, index) => (
             <ScrollReveal key={program.code} delay={(index % 2) * 100} className="h-full">
-              <a href={program.code === 'BSIT-BN' ? '/bsit' : '/coming-soon'} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+              <a href={getProgramHref(program.code)} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl">
                 <div className="shrink-0 overflow-hidden">
                   <img src={program.image} alt={`${program.title} students`} className="aspect-[16/9] w-full object-cover transition duration-500 group-hover:scale-[1.04]" />
                 </div>

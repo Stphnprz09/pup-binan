@@ -81,6 +81,8 @@ function getChildHref(parentLabel: string, childLabel: string) {
 
   if (parentLabel === 'Program Under Survey') {
     if (childLabel === 'BSIT-BN') return '/bsit'
+    if (childLabel === 'BEED-BN') return '/beed'
+    if (childLabel === 'BSED-EN-BN') return '/bsed-en'
 
     return '/coming-soon'
   }
