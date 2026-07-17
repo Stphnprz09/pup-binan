@@ -1,4 +1,4 @@
-import moaSigningImage from '../../assets/images/moa-signing.webp'
+import moaSigningImage from '../../assets/images/about/moa-signing.webp'
 import { ScrollReveal } from '../common/ScrollReveal'
 
 export function BinanHistorySection() {

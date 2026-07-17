@@ -40,10 +40,25 @@ pup-binan/
 │   ├── assets/             # Files imported by application code
 │   │   ├── fonts/          # Local font files
 │   │   ├── icons/          # SVG and other icon files
-│   │   └── images/         # Photos, illustrations, and backgrounds
+│   │   ├── images/         # Images grouped by feature/category
+│   │   │   ├── about/
+│   │   │   ├── branding/
+│   │   │   ├── certificates/
+│   │   │   ├── officials/  # Split into campus/ and university/
+│   │   │   ├── organizations/
+│   │   │   ├── programs/
+│   │   │   ├── survey/
+│   │   │   └── vision-mission/
+│   │   └── pdf/            # Embedded institutional documents
 │   ├── components/         # Reusable interface pieces
 │   │   └── common/         # Generic components used across features/pages
-│   ├── pages/              # Complete screens rendered by the application
+│   ├── pages/              # Complete screens grouped by feature
+│   │   ├── about/
+│   │   ├── accreditation/
+│   │   ├── exhibits/
+│   │   ├── home/
+│   │   ├── programs/
+│   │   └── shared/
 │   ├── styles/             # Global CSS and Tailwind entry point
 │   ├── App.tsx             # Top-level application component
 │   └── main.tsx            # Browser entry point; mounts React
@@ -55,9 +70,9 @@ pup-binan/
 
 ## Where New Code Goes
 
-- Add a complete screen to `src/pages` (for example, `AboutPage.tsx`).
+- Add a complete screen to the matching category in `src/pages` (for example, `src/pages/about/AboutPage.tsx`).
 - Add a reusable UI piece to `src/components`. Use `components/common` only when it is shared broadly.
-- Add imported media to the matching `src/assets` subfolder.
+- Add images to the matching category in `src/assets/images`; use `src/assets/pdf` for embedded documents.
 - Add site-wide CSS, Tailwind theme tokens, or font declarations to `src/styles`.
 - Put a file in `public` only when it must keep its exact filename and be available by a direct URL, such as `/favicon.svg`.
 

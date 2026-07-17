@@ -1,10 +1,10 @@
-import deGuzmanImage from '../../assets/images/de-guzman.webp'
-import gapasinImage from '../../assets/images/gapasin.webp'
-import gatanImage from '../../assets/images/gatan.webp'
-import guilloImage from '../../assets/images/guillo.webp'
-import muhiImage from '../../assets/images/muhi.webp'
-import ramiloImage from '../../assets/images/ramilo.webp'
-import testorImage from '../../assets/images/testor.webp'
+import deGuzmanImage from '../../assets/images/officials/university/de-guzman.webp'
+import gapasinImage from '../../assets/images/officials/university/gapasin.webp'
+import gatanImage from '../../assets/images/officials/university/gatan.webp'
+import guilloImage from '../../assets/images/officials/university/guillo.webp'
+import muhiImage from '../../assets/images/officials/university/muhi.webp'
+import ramiloImage from '../../assets/images/officials/university/ramilo.webp'
+import testorImage from '../../assets/images/officials/university/testor.webp'
 import { ScrollReveal } from '../common/ScrollReveal'
 
 const featuredOfficials = [

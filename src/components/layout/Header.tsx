@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import pupBinanLogo from '../../assets/images/pupbn-logo.webp'
+import pupBinanLogo from '../../assets/images/branding/pupbn-logo.webp'
 
 type MenuItem = {
   label: string

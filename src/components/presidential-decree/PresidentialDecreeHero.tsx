@@ -1,4 +1,4 @@
-import campusImage from '../../assets/images/pupbinan.webp'
+import campusImage from '../../assets/images/branding/pupbinan.webp'
 import { ScrollReveal } from '../common/ScrollReveal'
 
 export function PresidentialDecreeHero() {

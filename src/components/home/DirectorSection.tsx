@@ -1,4 +1,4 @@
-import directorImage from '../../assets/images/sevilla.webp'
+import directorImage from '../../assets/images/officials/campus/sevilla.webp'
 import { ScrollReveal } from '../common/ScrollReveal'
 
 export function DirectorSection() {

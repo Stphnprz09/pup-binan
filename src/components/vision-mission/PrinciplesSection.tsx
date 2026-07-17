@@ -1,5 +1,5 @@
-import missionImage from '../../assets/images/mission.webp'
-import visionImage from '../../assets/images/vision.webp'
+import missionImage from '../../assets/images/vision-mission/mission.webp'
+import visionImage from '../../assets/images/vision-mission/vision.webp'
 import { ScrollReveal } from '../common/ScrollReveal'
 
 const principles = [

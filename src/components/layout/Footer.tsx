@@ -1,4 +1,4 @@
-import pupLogo from '../../assets/images/pupbn-logo.webp'
+import pupLogo from '../../assets/images/branding/pupbn-logo.webp'
 import { QuickLinks } from '../footer/QuickLinks'
 
 export function Footer() {
@@ -27,7 +27,21 @@ export function Footer() {
           </address>
         </div>
       </div>
-      <div className="border-t border-white/10 px-5 py-5 text-center text-xs text-white/45">© 2026 Polytechnic University of the Philippines — Biñan Campus. All rights reserved.</div>
+      <div className="border-t border-white/10 px-5 py-5 text-center text-xs text-white/45">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 sm:flex-row">
+          <p>© 2026 Polytechnic University of the Philippines — Biñan Campus. All rights reserved.</p>
+          <p>
+            Developed by{' '}
+            <a href="https://stephen-perez.vercel.app" target="_blank" rel="noopener noreferrer" className="font-semibold text-white/75 transition hover:text-amber-300">
+              Stephen Perez
+            </a>{' '}
+            and{' '}
+            <a href="https://happy-enciso.vercel.app" target="_blank" rel="noopener noreferrer" className="font-semibold text-white/75 transition hover:text-amber-300">
+              Happy Enciso
+            </a>
+          </p>
+        </div>
+      </div>
     </footer>
   )
 }

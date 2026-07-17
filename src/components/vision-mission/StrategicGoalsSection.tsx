@@ -1,4 +1,4 @@
-import strategicGoalsImage from '../../assets/images/strategic-goal.webp'
+import strategicGoalsImage from '../../assets/images/vision-mission/strategic-goal.webp'
 import { ScrollReveal } from '../common/ScrollReveal'
 
 export function StrategicGoalsSection() {

@@ -1,4 +1,4 @@
-import certificateImage from '../../assets/images/COA-PUPBC.webp'
+import certificateImage from '../../assets/images/certificates/COA-PUPBC.webp'
 import { ScrollReveal } from '../common/ScrollReveal'
 
 const certificateDriveUrl = 'https://drive.google.com/file/d/1YPrzO077AwpYOmD5r7HGcycdmUoyNQUM/view'
