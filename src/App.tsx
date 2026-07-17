@@ -11,19 +11,49 @@ import { BsedEnglishPage } from './pages/BsedEnglishPage'
 import { BsedSocialStudiesPage } from './pages/BsedSocialStudiesPage'
 import { CampusOfficialsPage } from './pages/CampusOfficialsPage'
 import { CertificateAuthenticityPage } from './pages/CertificateAuthenticityPage'
+import { ChedMemorandumPage } from './pages/ChedMemorandumPage'
 import { CitizenCharterPage } from './pages/CitizenCharterPage'
 import { ComingSoonPage } from './pages/ComingSoonPage'
+import { ExhibitPage } from './pages/ExhibitPage'
+import { FacultyManualPage } from './pages/FacultyManualPage'
 import { HomePage } from './pages/HomePage'
 import { HistoryPage } from './pages/HistoryPage'
 import { OrganizationsPage } from './pages/OrganizationsPage'
 import { ProgramCompliancePage } from './pages/ProgramCompliancePage'
+import { ProgramsUnderSurveyPage } from './pages/ProgramsUnderSurveyPage'
+import { PresidentialDecreePage } from './pages/PresidentialDecreePage'
 import { StudentHandbookPage } from './pages/StudentHandbookPage'
+import { SyllabusPage } from './pages/SyllabusPage'
 import { UniversityOfficialsPage } from './pages/UniversityOfficialsPage'
 import { UniversityCodePage } from './pages/UniversityCodePage'
 import { VirtualCampusPage } from './pages/VirtualCampusPage'
 import { VisionMissionPage } from './pages/VisionMissionPage'
 
 function App() {
+  if (window.location.pathname === '/syllabus') {
+    return <SyllabusPage />
+  }
+
+  if (window.location.pathname === '/presidential-decree-no-1341') {
+    return <PresidentialDecreePage />
+  }
+
+  if (window.location.pathname === '/ched-memorandum-order') {
+    return <ChedMemorandumPage />
+  }
+
+  if (window.location.pathname === '/faculty-manual') {
+    return <FacultyManualPage />
+  }
+
+  if (window.location.pathname === '/exhibit') {
+    return <ExhibitPage />
+  }
+
+  if (window.location.pathname === '/program-under-survey') {
+    return <ProgramsUnderSurveyPage />
+  }
+
   if (window.location.pathname === '/certificate-of-program-compliance') {
     return <ProgramCompliancePage />
   }

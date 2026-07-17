@@ -63,7 +63,8 @@ function getMenuHref(label: string) {
   if (label.includes('About PUP')) return '/about-pup-binan'
   if (label === 'Certificate of Authenticity') return '/certificate-of-authenticity'
   if (label === 'Certificate of Program Compliance') return '/certificate-of-program-compliance'
-  if (label === 'Program Under Survey') return '/#programs'
+  if (label === 'Program Under Survey') return '/program-under-survey'
+  if (label === 'Exhibit') return '/exhibit'
 
   return '/coming-soon'
 }
@@ -83,6 +84,22 @@ function getChildHref(parentLabel: string, childLabel: string) {
 
   if (parentLabel === 'Exhibit' && childLabel === 'Student Handbook') {
     return '/student-handbook'
+  }
+
+  if (parentLabel === 'Exhibit' && childLabel === 'Faculty Manual') {
+    return '/faculty-manual'
+  }
+
+  if (parentLabel === 'Exhibit' && childLabel === 'CHED Memorandum Order') {
+    return '/ched-memorandum-order'
+  }
+
+  if (parentLabel === 'Exhibit' && childLabel === 'Presidential Decree No. 1341') {
+    return '/presidential-decree-no-1341'
+  }
+
+  if (parentLabel === 'Exhibit' && childLabel === 'Syllabus') {
+    return '/syllabus'
   }
 
   if (parentLabel.includes('About PUP')) {
