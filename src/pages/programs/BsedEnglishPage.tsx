@@ -12,7 +12,7 @@ export function BsedEnglishPage() {
       <main>
         <ProgramHero title="Bachelor of Secondary Education Major in English" code="BSED-EN-BN" image={englishImage} />
         <BsedEnglishOverviewSection />
-        <AreasUnderSurveySection />
+        <AreasUnderSurveySection programPath="/bsed-en" />
       </main>
       <Footer />
     </div>

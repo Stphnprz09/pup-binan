@@ -12,7 +12,7 @@ export function BsiePage() {
       <main>
         <ProgramHero title="Bachelor of Science in Industrial Engineering" code="BSIE-BN" image={industrialEngineeringImage} />
         <BsieOverviewSection />
-        <AreasUnderSurveySection />
+        <AreasUnderSurveySection programPath="/bsie" />
       </main>
       <Footer />
     </div>

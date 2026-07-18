@@ -19,6 +19,7 @@ import { SyllabusPage } from './pages/exhibits/SyllabusPage'
 import { UniversityCodePage } from './pages/exhibits/UniversityCodePage'
 import { HomePage } from './pages/home/HomePage'
 import { BeedPage } from './pages/programs/BeedPage'
+import { ProgramAreaPage, type ProgramSlug } from './pages/programs/ProgramAreaPage'
 import { BsbaHrmPage } from './pages/programs/BsbaHrmPage'
 import { BscpePage } from './pages/programs/BscpePage'
 import { BsedEnglishPage } from './pages/programs/BsedEnglishPage'
@@ -30,6 +31,19 @@ import { ProgramsUnderSurveyPage } from './pages/programs/ProgramsUnderSurveyPag
 import { ComingSoonPage } from './pages/shared/ComingSoonPage'
 
 function App() {
+  const programAreaMatch = window.location.pathname.match(
+    /^\/(bsit|beed|bsed-en|bsed-ss|bscpe|bsie|bsba-hrm|bspsy)\/area(10|[1-9])\/?$/,
+  )
+
+  if (programAreaMatch) {
+    return (
+      <ProgramAreaPage
+        programSlug={programAreaMatch[1] as ProgramSlug}
+        areaNumber={Number(programAreaMatch[2])}
+      />
+    )
+  }
+
   if (window.location.pathname === '/syllabus') {
     return <SyllabusPage />
   }

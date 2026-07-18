@@ -12,7 +12,7 @@ export function BeedPage() {
       <main>
         <ProgramHero title="Bachelor of Elementary Education" code="BEED-BN" image={elementaryImage} />
         <BeedOverviewSection />
-        <AreasUnderSurveySection />
+        <AreasUnderSurveySection programPath="/beed" />
       </main>
       <Footer />
     </div>

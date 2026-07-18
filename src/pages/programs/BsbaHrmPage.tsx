@@ -12,7 +12,7 @@ export function BsbaHrmPage() {
       <main>
         <ProgramHero title="Bachelor of Science in Business Administration Major in Human Resource Management" code="BSBA-HRM-BN" image={humanResourceImage} />
         <BsbaHrmOverviewSection />
-        <AreasUnderSurveySection />
+        <AreasUnderSurveySection programPath="/bsba-hrm" />
       </main>
       <Footer />
     </div>

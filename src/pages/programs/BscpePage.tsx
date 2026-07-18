@@ -12,7 +12,7 @@ export function BscpePage() {
       <main>
         <ProgramHero title="Bachelor of Science in Computer Engineering" code="BSCPE-BN" image={computerEngineeringImage} />
         <BscpeOverviewSection />
-        <AreasUnderSurveySection />
+        <AreasUnderSurveySection programPath="/bscpe" />
       </main>
       <Footer />
     </div>

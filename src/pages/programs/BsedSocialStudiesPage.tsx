@@ -12,7 +12,7 @@ export function BsedSocialStudiesPage() {
       <main>
         <ProgramHero title="Bachelor of Secondary Education Major in Social Studies" code="BSED-SS-BN" image={socialStudiesImage} />
         <BsedSocialStudiesOverviewSection />
-        <AreasUnderSurveySection />
+        <AreasUnderSurveySection programPath="/bsed-ss" />
       </main>
       <Footer />
     </div>

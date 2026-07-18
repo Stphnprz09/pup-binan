@@ -12,7 +12,7 @@ export function BspsyPage() {
       <main>
         <ProgramHero title="Bachelor of Science in Psychology" code="BSPSY-BN" image={psychologyImage} />
         <BspsyOverviewSection />
-        <AreasUnderSurveySection />
+        <AreasUnderSurveySection programPath="/bspsy" />
       </main>
       <Footer />
     </div>

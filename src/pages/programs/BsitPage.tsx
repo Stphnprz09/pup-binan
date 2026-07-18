@@ -12,7 +12,7 @@ export function BsitPage() {
       <main>
         <ProgramHero title="Bachelor of Science in Information Technology" code="BSIT-BN" image={itImage} />
         <BsitOverviewSection />
-        <AreasUnderSurveySection />
+        <AreasUnderSurveySection programPath="/bsit" />
       </main>
       <Footer />
     </div>
