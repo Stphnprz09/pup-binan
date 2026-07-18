@@ -9,6 +9,10 @@ import socialStudiesImage from '../../assets/images/programs/program-social-stud
 import { ScrollReveal } from '../../components/common/ScrollReveal'
 import { Footer } from '../../components/layout/Footer'
 import { Header } from '../../components/layout/Header'
+import { beedAreaDocumentLinks } from '../../data/beedAreaDocumentLinks'
+import { bsedEnglishAreaDocumentLinks } from '../../data/bsedEnglishAreaDocumentLinks'
+import { bsedSocialStudiesAreaDocumentLinks } from '../../data/bsedSocialStudiesAreaDocumentLinks'
+import { bsitAreaDocumentLinks } from '../../data/bsitAreaDocumentLinks'
 
 const programDetails = {
   bsit: {
@@ -208,12 +212,19 @@ type ProgramAreaPageProps = {
   areaNumber: number
 }
 
-const comingSoonLinks = ['System, Inputs and Processes', 'Implementation', 'Outcome/s']
+type DocumentLinkItem = {
+  label: string
+  href: string
+}
 
-function DocumentLink({ label }: { label: string }) {
+function DocumentLink({ label, href }: DocumentLinkItem) {
+  const isGoogleDriveLink = href.startsWith('https://drive.google.com/')
+
   return (
     <a
-      href="/coming-soon"
+      href={href}
+      target={isGoogleDriveLink ? '_blank' : undefined}
+      rel={isGoogleDriveLink ? 'noopener noreferrer' : undefined}
       className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 font-semibold text-slate-700 transition hover:border-[#8a1724]/40 hover:bg-[#8a1724]/[0.04] hover:text-[#8a1724] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-[#8a1724]"
     >
       <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[#8a1724]/10 text-[#8a1724] transition group-hover:bg-[#8a1724] group-hover:text-white" aria-hidden="true">
@@ -221,7 +232,7 @@ function DocumentLink({ label }: { label: string }) {
       </span>
       <span>{label}</span>
       <span className="ml-auto text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-[#8a1724]">
-        Coming soon
+        {isGoogleDriveLink ? 'View Google Drive' : 'Coming soon'}
       </span>
     </a>
   )
@@ -230,7 +241,7 @@ function DocumentLink({ label }: { label: string }) {
 type ResourceCardProps = {
   heading: string
   subtitle?: string
-  links: string[]
+  links: DocumentLinkItem[]
   delay?: number
 }
 
@@ -244,7 +255,7 @@ function ResourceCard({ heading, subtitle, links, delay = 0 }: ResourceCardProps
         <div className="flex flex-1 flex-col p-6 sm:p-8">
           {subtitle && <p className="mb-7 text-center text-xl font-semibold leading-snug text-slate-800">{subtitle}</p>}
           <div className="mt-auto space-y-3">
-            {links.map((link) => <DocumentLink key={link} label={link} />)}
+            {links.map((link) => <DocumentLink key={link.label} {...link} />)}
           </div>
         </div>
         <div className="h-2 bg-amber-400" />
@@ -256,6 +267,16 @@ function ResourceCard({ heading, subtitle, links, delay = 0 }: ResourceCardProps
 export function ProgramAreaPage({ programSlug, areaNumber }: ProgramAreaPageProps) {
   const program = programDetails[programSlug]
   const area = areaDetails[areaNumber]
+  const documents =
+    programSlug === 'bsit'
+      ? bsitAreaDocumentLinks[areaNumber]
+      : programSlug === 'beed'
+        ? beedAreaDocumentLinks[areaNumber]
+        : programSlug === 'bsed-en'
+          ? bsedEnglishAreaDocumentLinks[areaNumber]
+          : programSlug === 'bsed-ss'
+            ? bsedSocialStudiesAreaDocumentLinks[areaNumber]
+            : undefined
 
   return (
     <div className="min-h-screen bg-[#f7f5f1] text-slate-900">
@@ -290,20 +311,44 @@ export function ProgramAreaPage({ programSlug, areaNumber }: ProgramAreaPageProp
             </ScrollReveal>
 
             <div className="mx-auto mt-14 grid max-w-4xl gap-7 md:grid-cols-2">
-              <ResourceCard heading="Self Survey" links={['Self Survey']} />
-              <ResourceCard heading="Program Performance Profile" links={['PPP']} delay={90} />
+              <ResourceCard
+                heading="Self Survey"
+                links={[{ label: 'Self Survey', href: documents?.selfSurvey ?? '/coming-soon' }]}
+              />
+              <ResourceCard
+                heading="Program Performance Profile"
+                links={[{ label: 'PPP', href: documents?.programPerformanceProfile ?? '/coming-soon' }]}
+                delay={90}
+              />
             </div>
 
             <div className="mt-8 grid items-stretch gap-7 lg:grid-cols-2">
-              {area.parameters.map((parameter, index) => (
-                <ResourceCard
-                  key={`${index}-${parameter}`}
-                  heading={`Parameter ${String.fromCharCode(65 + index)}`}
-                  subtitle={parameter}
-                  links={comingSoonLinks}
-                  delay={(index % 2) * 90}
-                />
-              ))}
+              {area.parameters.map((parameter, index) => {
+                const parameterDocuments = documents?.parameters[index]
+
+                return (
+                  <ResourceCard
+                    key={`${index}-${parameter}`}
+                    heading={`Parameter ${String.fromCharCode(65 + index)}`}
+                    subtitle={parameter}
+                    links={[
+                      {
+                        label: 'System, Inputs and Processes',
+                        href: parameterDocuments?.systemInputsProcesses ?? '/coming-soon',
+                      },
+                      {
+                        label: 'Implementation',
+                        href: parameterDocuments?.implementation ?? '/coming-soon',
+                      },
+                      {
+                        label: 'Outcome/s',
+                        href: parameterDocuments?.outcomes ?? '/coming-soon',
+                      },
+                    ]}
+                    delay={(index % 2) * 90}
+                  />
+                )
+              })}
             </div>
           </div>
         </section>
