@@ -6,6 +6,9 @@ import industrialEngineeringImage from '../../assets/images/programs/program-ind
 import itImage from '../../assets/images/programs/program-it.png'
 import psychologyImage from '../../assets/images/programs/program-psychology.png'
 import socialStudiesImage from '../../assets/images/programs/program-social-studies.png'
+import bsbaHrmCertificatePdf from '../../assets/pdf/PUPBN - COPC - BSBAHRM.pdf'
+import bscpeCertificatePdf from '../../assets/pdf/PUPBN - COPC - BSCPE.pdf'
+import bsieCertificatePdf from '../../assets/pdf/PUPBN - COPC - BSIE.pdf'
 import { ScrollReveal } from '../common/ScrollReveal'
 
 type ProgramCompliance = {
@@ -44,16 +47,19 @@ const programs: ProgramCompliance[] = [
     code: 'BSCPE-BN',
     title: 'Bachelor of Science in Computer Engineering',
     image: computerEngineeringImage,
+    certificateUrl: bscpeCertificatePdf,
   },
   {
     code: 'BSIE-BN',
     title: 'Bachelor of Science in Industrial Engineering',
     image: industrialEngineeringImage,
+    certificateUrl: bsieCertificatePdf,
   },
   {
     code: 'BSBA-HRM-BN',
     title: 'Bachelor of Science in Business Administration Major in Human Resource Management',
     image: humanResourceImage,
+    certificateUrl: bsbaHrmCertificatePdf,
   },
   {
     code: 'BSPSY-BN',
@@ -94,6 +100,7 @@ export function ProgramComplianceSection() {
         <div className="mt-12 grid gap-6 lg:mt-16">
           {programs.map((program, index) => {
             const isAvailable = Boolean(program.certificateUrl)
+            const isGoogleDrive = program.certificateUrl?.startsWith('https://drive.google.com/') ?? false
 
             return (
               <ScrollReveal key={program.code} delay={(index % 3) * 70}>
@@ -116,7 +123,7 @@ export function ProgramComplianceSection() {
                     </div>
                     <h3 className="mt-3 text-xl font-bold leading-snug text-slate-900 transition group-hover:text-[#8a1724] sm:text-2xl">{program.title}</h3>
                     <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#8a1724]">
-                      {isAvailable ? 'View on Google Drive' : 'View coming soon page'} <LinkIcon external={isAvailable} />
+                      {isAvailable ? (isGoogleDrive ? 'View on Google Drive' : 'View certificate PDF') : 'View coming soon page'} <LinkIcon external={isAvailable} />
                     </span>
                   </div>
                 </a>

@@ -4,6 +4,7 @@ import { Header } from '../../components/layout/Header'
 import { AreasUnderSurveySection } from '../../components/programs/AreasUnderSurveySection'
 import { BsieOverviewSection } from '../../components/programs/BsieOverviewSection'
 import { ProgramHero } from '../../components/programs/ProgramHero'
+import { bsieAreaFolderLinks } from '../../data/bsieAreaFolderLinks'
 
 export function BsiePage() {
   return (
@@ -12,7 +13,7 @@ export function BsiePage() {
       <main>
         <ProgramHero title="Bachelor of Science in Industrial Engineering" code="BSIE-BN" image={industrialEngineeringImage} />
         <BsieOverviewSection />
-        <AreasUnderSurveySection programPath="/bsie" />
+        <AreasUnderSurveySection programPath="/bsie" areaLinks={bsieAreaFolderLinks} />
       </main>
       <Footer />
     </div>

@@ -4,6 +4,7 @@ import { Header } from '../../components/layout/Header'
 import { AreasUnderSurveySection } from '../../components/programs/AreasUnderSurveySection'
 import { BscpeOverviewSection } from '../../components/programs/BscpeOverviewSection'
 import { ProgramHero } from '../../components/programs/ProgramHero'
+import { bscpeAreaFolderLinks } from '../../data/bscpeAreaFolderLinks'
 
 export function BscpePage() {
   return (
@@ -12,7 +13,7 @@ export function BscpePage() {
       <main>
         <ProgramHero title="Bachelor of Science in Computer Engineering" code="BSCPE-BN" image={computerEngineeringImage} />
         <BscpeOverviewSection />
-        <AreasUnderSurveySection programPath="/bscpe" />
+        <AreasUnderSurveySection programPath="/bscpe" areaLinks={bscpeAreaFolderLinks} />
       </main>
       <Footer />
     </div>

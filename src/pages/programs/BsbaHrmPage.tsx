@@ -4,6 +4,7 @@ import { Header } from '../../components/layout/Header'
 import { AreasUnderSurveySection } from '../../components/programs/AreasUnderSurveySection'
 import { BsbaHrmOverviewSection } from '../../components/programs/BsbaHrmOverviewSection'
 import { ProgramHero } from '../../components/programs/ProgramHero'
+import { bsbaHrmAreaFolderLinks } from '../../data/bsbaHrmAreaFolderLinks'
 
 export function BsbaHrmPage() {
   return (
@@ -12,7 +13,7 @@ export function BsbaHrmPage() {
       <main>
         <ProgramHero title="Bachelor of Science in Business Administration Major in Human Resource Management" code="BSBA-HRM-BN" image={humanResourceImage} />
         <BsbaHrmOverviewSection />
-        <AreasUnderSurveySection programPath="/bsba-hrm" />
+        <AreasUnderSurveySection programPath="/bsba-hrm" areaLinks={bsbaHrmAreaFolderLinks} />
       </main>
       <Footer />
     </div>

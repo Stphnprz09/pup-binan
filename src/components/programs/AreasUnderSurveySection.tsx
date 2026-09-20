@@ -25,9 +25,10 @@ const surveyAreas = [
 
 type AreasUnderSurveySectionProps = {
   programPath: string
+  areaLinks?: readonly string[]
 }
 
-export function AreasUnderSurveySection({ programPath }: AreasUnderSurveySectionProps) {
+export function AreasUnderSurveySection({ programPath, areaLinks }: AreasUnderSurveySectionProps) {
   return (
     <section className="relative overflow-hidden bg-[#f7f5f1] py-20 lg:py-28" aria-labelledby="survey-title">
       <div className="absolute -left-40 top-1/3 -z-10 size-[32rem] rotate-45 rounded-[5rem] border-[60px] border-[#8a1724]/[0.025]" />
@@ -39,23 +40,30 @@ export function AreasUnderSurveySection({ programPath }: AreasUnderSurveySection
         </ScrollReveal>
 
         <div className="mt-14 grid items-stretch gap-7 sm:grid-cols-2 lg:grid-cols-3">
-          {surveyAreas.map((area, index) => (
-            <ScrollReveal key={area.title} delay={(index % 3) * 80} className="h-full">
-              <a
-                href={`${programPath}/area${index + 1}`}
-                aria-label={`Open Area ${index + 1}: ${area.title}`}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#8a1724]"
-              >
-                <div className="relative overflow-hidden">
-                  <img src={area.image} alt="" className="aspect-[3/2] w-full object-cover transition duration-500 group-hover:scale-[1.04]" />
-                  <span className="absolute left-4 top-4 grid size-11 place-items-center rounded-xl bg-[#8a1724] text-sm font-black text-white shadow-lg">{String(index + 1).padStart(2, '0')}</span>
-                </div>
-                <div className="flex flex-1 items-center justify-center p-6 text-center">
-                  <h3 className="font-bold leading-snug text-slate-800">{area.title}</h3>
-                </div>
-              </a>
-            </ScrollReveal>
-          ))}
+          {surveyAreas.map((area, index) => {
+            const href = areaLinks?.[index] ?? `${programPath}/area${index + 1}`
+            const isExternal = href.startsWith('https://')
+
+            return (
+              <ScrollReveal key={area.title} delay={(index % 3) * 80} className="h-full">
+                <a
+                  href={href}
+                  target={isExternal ? '_blank' : undefined}
+                  rel={isExternal ? 'noopener noreferrer' : undefined}
+                  aria-label={`Open Area ${index + 1}: ${area.title}${isExternal ? ' on Google Drive in a new tab' : ''}`}
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#8a1724]"
+                >
+                  <div className="relative overflow-hidden">
+                    <img src={area.image} alt="" className="aspect-[3/2] w-full object-cover transition duration-500 group-hover:scale-[1.04]" />
+                    <span className="absolute left-4 top-4 grid size-11 place-items-center rounded-xl bg-[#8a1724] text-sm font-black text-white shadow-lg">{String(index + 1).padStart(2, '0')}</span>
+                  </div>
+                  <div className="flex flex-1 items-center justify-center p-6 text-center">
+                    <h3 className="font-bold leading-snug text-slate-800">{area.title}</h3>
+                  </div>
+                </a>
+              </ScrollReveal>
+            )
+          })}
         </div>
       </div>
     </section>

@@ -35,10 +35,6 @@ export function Footer() {
             <a href="https://stephen-perez.vercel.app" target="_blank" rel="noopener noreferrer" className="font-semibold text-white/75 transition hover:text-amber-300">
               Stephen Perez
             </a>{' '}
-            and{' '}
-            <a href="https://happy-enciso.vercel.app" target="_blank" rel="noopener noreferrer" className="font-semibold text-white/75 transition hover:text-amber-300">
-              Happy Enciso
-            </a>
           </p>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import deGuzmanImage from '../../assets/images/officials/university/de-guzman.webp'
 import gapasinImage from '../../assets/images/officials/university/gapasin.webp'
-import gatanImage from '../../assets/images/officials/university/gatan.webp'
 import guilloImage from '../../assets/images/officials/university/guillo.webp'
 import muhiImage from '../../assets/images/officials/university/muhi.webp'
 import ramiloImage from '../../assets/images/officials/university/ramilo.webp'
 import testorImage from '../../assets/images/officials/university/testor.webp'
+import torresImage from '../../assets/images/officials/university/torres.webp'
 import { ScrollReveal } from '../common/ScrollReveal'
 
 const featuredOfficials = [
@@ -42,10 +42,10 @@ const vicePresidents = [
     image: gapasinImage,
   },
   {
-    name: 'Pascualito B. Gatan',
-    credentials: 'MEM',
+    name: 'Armando A. Torres',
+    credentials: 'DEM',
     position: 'Vice President for Branches and Satellite Campuses',
-    image: gatanImage,
+    image: torresImage,
   },
   {
     name: 'Adam V. Ramilo',
@@ -93,7 +93,7 @@ export function OfficialsSection() {
           {vicePresidents.map((official, index) => (
             <ScrollReveal key={official.name} delay={(index % 3) * 90} className="h-full">
               <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:p-7">
-                <img src={official.image} alt={official.name} className="mx-auto aspect-[4/5] w-full max-w-64 rounded-xl object-cover object-top shadow-md" />
+                <img src={official.image} alt={official.name} className="mx-auto h-80 w-full max-w-64 rounded-xl object-cover object-top shadow-md" />
                 <h3 className="mt-6 text-xl font-black leading-snug">{official.name}</h3>
                 <p className="mt-1 font-bold text-slate-500">{official.credentials}</p>
                 <div className="mx-auto mt-4 h-0.5 w-14 bg-[#8a1724]" />
